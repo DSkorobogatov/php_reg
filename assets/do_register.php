@@ -17,4 +17,20 @@ $stmt->execute([
     'password' => password_hash($_POST['password'], PASSWORD_DEFAULT),
 ]);
 
+
+$to  = "<".$_POST['email'].">" ; 
+
+
+$subject = "Регистрация на сайте"; 
+
+$message = ' <p>Ваш логин: '.$_POST['email'].'</p>';
+$message .= ' <p>Ваш пароль: '.$_POST['password'].'</p>';
+
+$headers  = "Content-type: text/html; charset=windows-1251 \r\n"; 
+$headers .= "From: От кого письмо <from@example.com>\r\n"; 
+$headers .= "Reply-To: reply-to@example.com\r\n"; 
+
+mail($to, $subject, $message, $headers); 
+
+
 header('Location: login.php');

@@ -38,6 +38,17 @@ require_once __DIR__.'/assets/header.php';
 		<div class="mb-3">
           <input type="text" class="form-control" id="username" name="username"  value="<?php echo $user['username']?>" required>
         </div>
+		
+		<div class="mb-3">
+          <input type="text" class="form-control" id="userphone" name="userphone"  value="<?php echo $user['userphone']?>" placeholder="Укажите телефон">
+        </div>
+		<div class="mb-3">
+          <input type="text" class="form-control" id="usercity" name="usercity"  value="<?php echo $user['usercity']?>" placeholder="Укажите город">
+        </div>
+		<div class="mb-3">
+          <input type="number" class="form-control" id="userage" name="userage"  value="<?php echo $user['userage']?>" placeholder="Укажите Ваш возраст">
+        </div>
+		
 		<div class="mb-3">
 		<p>Если вы хотите сменить пароль, заполните два последующих поля</p>
 		</div>
